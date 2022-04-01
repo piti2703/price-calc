@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALKULATOR DEJA & BORY</title>
+
+    
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">KALKULATOR RUSTICAL</a>
+        <a href="deja-rustical.html">KALKULATOR DEJA & BORY</a>
+    </nav>
+    <section class="calculator">
+        <h2 class="calculator__heading">KALKULATOR CEN DEJA & BORY</h2>
+        <div class="calculator__top">
+            <div class="calculator__producer">
+                <div class="calculator__producer-netto column">
+                    <h3>CENY NETTO</h3>
+                    <input type="number" class="producer-netto-basic" value="0">
+                    <input type="number" class="producer-netto-ten" disabled>
+                    <input type="number" class="producer-netto-thirty" disabled>
+                </div>
+                <div class="calculator__producer-brutto column">
+                    <h3>CENY BRUTTO</h3>
+                    <input type="number" class="producer-brutto-basic" disabled>
+                    <input type="number" class="producer-brutto-ten" disabled>
+                    <input type="number" class="producer-brutto-thirty" disabled>
+                </div>
+            </div>
+            <div class="calculator__eshop">
+                <div class="calculator__eshop-netto column">
+                    <h3>CENY NA SKLEPIE</h3>
+                    <input type="number" class="eshop-basic" disabled>
+                    <input type="number" class="eshop-ten" disabled>
+                    <input type="number" class="eshop-thirty" disabled>
+                </div>
+            </div>
+            <div class="calculator__allegro">
+                <div class="calculator__allegro-netto column">
+                    <h3>CENY NA ALLEGRO</h3>
+                    <input type="number" class="allegro-basic" disabled  value="0">
+                    <input type="number" class="allegro-ten" disabled  value="0">
+                    <input type="number" class="allegro-thirty" disabled  value="0">
+                </div>
+            </div>
+        </div>
+        <div class="calculator__bottom">
+            <div class="calculator__profit column">
+                <h3>ZYSK BRUTTO</h3>
+                <input type="number" class="profit-brutto" value="0">
+        </div>
+        <div class="calculator__profit column">
+                <h3>ZYSK NETTO</h3>
+                <input type="number" class="profit-netto" disabled>
+        </div>
+        <div class="calculator__delivery column">
+                <h3>WYSYŁKA</h3>
+                <input type="number" class="delivery" value="0">
+        </div>
+        </div>
+        <p class="calculator__error">Uzupełnij wszystkie pola!</p>
+    </section>
+
+    <script src="js/deja-bory.js"></script>
+</body>
+</html>

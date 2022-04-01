@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  background-image: linear-gradient(315deg, #63380e 0%, #996633 74%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav {
+  background-color: #fff;
+  -webkit-box-shadow: black 0px 0px 10px;
+          box-shadow: black 0px 0px 10px;
+  width: 100%;
+  margin-bottom: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav::after {
+  content: '';
+  background-color: #996633;
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.nav a {
+  color: #000;
+  text-decoration: none;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px #996633 solid;
+  font-weight: 900;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.nav a:hover {
+  background-color: rgba(229, 227, 227, 0.893);
+}
+
+.calculator {
+  background-color: #fff;
+  -webkit-box-shadow: black 0px 0px 10px;
+          box-shadow: black 0px 0px 10px;
+  padding: 2em;
+  margin: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.calculator h3 {
+  padding: 1em 0;
+}
+
+.calculator__error {
+  color: #e01a1a;
+  font-size: 1.4em;
+  visibility: hidden;
+}
+
+.calculator input {
+  margin: 0.3em 0;
+  width: 100%;
+  padding: 0.8em 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.calculator__heading {
+  padding: 1em 0;
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav::after {
+    display: block;
+  }
+  .nav a {
+    border: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .calculator input {
+    margin: 0.3em 0.5em;
+    width: 100%;
+    padding: 0.8em 0;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .calculator .column {
+    margin: 0 1em;
+  }
+  .calculator__heading {
+    padding: 1em 0;
+    font-size: 3rem;
+    border-bottom: 5px #996633 solid;
+    display: block;
+    max-width: 500px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .calculator__top, .calculator__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2em 0;
+  }
+  .calculator__producer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=main.css.map */

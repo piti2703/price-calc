@@ -1,0 +1,156 @@
+@import './colors';
+@import './components';
+@import './mixins';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    background-image: linear-gradient(315deg, rgb(99, 56, 14) 0%, rgb(153, 102, 51) 74%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    background-color: #fff;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+
+    &::after {
+        content: '';
+        background-color: #996633;
+        height: 100%;
+        width: 4px;
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+        padding: 2em;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px #996633 solid;
+        font-weight: 900;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: rgba(229, 227, 227, 0.893);
+        }
+        
+    }
+}
+
+.calculator {
+    background-color: #fff;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    padding: 2em;
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h3 {
+        padding: 1em 0;
+    }
+
+    &__error {
+        color: rgb(224, 26, 26);
+        font-size: 1.4em;
+        visibility: hidden;
+    }
+
+    input {
+        margin: 0.3em 0;
+        width: 100%;
+        padding: 0.8em 0;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    &__heading {
+        padding: 1em 0;
+        font-size: 2rem;
+    }
+
+}
+
+// MEDIA 
+
+@media(min-width: 576px) {
+
+}
+
+
+@media(min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        
+        &::after {
+            display: block;
+        }
+
+        a {
+            border: none;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+
+    .calculator {
+
+        input {
+            margin: 0.3em 0.5em;
+            width: 100%;
+            padding: 0.8em 0;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        .column {
+            margin: 0 1em;
+        }
+
+        &__heading {
+            padding: 1em 0;
+            font-size: 3rem;
+            border-bottom: 5px rgb(153, 102, 51) solid;
+            display: block;
+            max-width: 500px;
+            align-self: center;
+        }
+
+        &__top, &__bottom  {
+            display: flex;
+            justify-content: center;
+            padding: 2em 0;
+        }
+        &__producer {
+            display: flex;
+        }
+    }
+
+}
+
