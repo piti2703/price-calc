@@ -33,30 +33,30 @@ const pricesCalculator = () => {
     eshopFive.value = (parseFloat(producerBruttoFive.value) + parseFloat(profitBrutto.value)).toFixed(2)
     eshopTen.value = (parseFloat(producerBruttoTen.value) + parseFloat(profitBrutto.value)).toFixed(2)
 
-    const allegroInvisibleFirst = ((parseFloat(eshopBasic.value) + 0.1 * parseFloat(delivery.value)) / 0.9).toFixed(2)
-    const allegroInvisibleSecond = ((parseFloat(eshopFive.value) + 0.1 * parseFloat(delivery.value)) / 0.9).toFixed(2)
-    const allegroInvisibleThird = ((parseFloat(eshopTen.value) + 0.1 * parseFloat(delivery.value)) / 0.9).toFixed(2)
+    const allegroInvisibleFirst = ((parseFloat(eshopBasic.value) + 0.105 * parseFloat(delivery.value)) / 0.895).toFixed(2)
+    const allegroInvisibleSecond = ((parseFloat(eshopFive.value) + 0.105 * parseFloat(delivery.value)) / 0.895).toFixed(2)
+    const allegroInvisibleThird = ((parseFloat(eshopTen.value) + 0.105 * parseFloat(delivery.value)) / 0.895).toFixed(2)
     
     
-    if(parseFloat(allegroInvisibleFirst) + parseFloat(delivery.value) >= 2000) {
-        allegroBasic.value = (parseFloat(eshopBasic.value) + 200).toFixed(2)
+    if(parseFloat(allegroInvisibleFirst) + parseFloat(delivery.value) >= 2500) {
+        allegroBasic.value = (parseFloat(eshopBasic.value) + 250).toFixed(2)
     }
     else {
-        allegroBasic.value = ((parseFloat(eshopBasic.value) + 0.1 * parseFloat(delivery.value)) / 0.9).toFixed(2)
+        allegroBasic.value = ((parseFloat(eshopBasic.value) + 0.105 * parseFloat(delivery.value)) / 0.895).toFixed(2)
     }
 
-    if(parseFloat(allegroInvisibleSecond) + parseFloat(delivery.value) >= 2000) {
-        allegroFive.value = (parseFloat(eshopFive.value) + 200).toFixed(2)
+    if(parseFloat(allegroInvisibleSecond) + parseFloat(delivery.value) >= 2500) {
+        allegroFive.value = (parseFloat(eshopFive.value) + 250).toFixed(2)
     }
     else {
-        allegroFive.value = ((parseFloat(eshopFive.value) + 0.1 * parseFloat(delivery.value)) / 0.9).toFixed(2)
+        allegroFive.value = ((parseFloat(eshopFive.value) + 0.105 * parseFloat(delivery.value)) / 0.895).toFixed(2)
     }
 
-    if(parseFloat(allegroInvisibleThird) + parseFloat(delivery.value) >= 2000) {
-        allegroTen.value = (parseFloat(eshopTen.value) + 200).toFixed(2)
+    if(parseFloat(allegroInvisibleThird) + parseFloat(delivery.value) >= 2500) {
+        allegroTen.value = (parseFloat(eshopTen.value) + 250).toFixed(2)
     }
     else {
-        allegroTen.value = ((parseFloat(eshopTen.value) + 0.1 * parseFloat(delivery.value)) / 0.9).toFixed(2)
+        allegroTen.value = ((parseFloat(eshopTen.value) + 0.105 * parseFloat(delivery.value)) / 0.895).toFixed(2)
     }
 
     profitNetto.value = (profitBrutto.value * 0.77).toFixed(2)
